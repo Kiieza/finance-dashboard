@@ -1,7 +1,6 @@
 const KEY='meuFluxoDados', CONFIG='meuFluxoSync';
 // Preencha uma única vez antes de publicar. Não envie este arquivo a um repositório público.
-const BUILT_IN_CONFIG={url:'https://script.google.com/macros/s/AKfycby4abJ66ZMLNvXGhfCPhJzZZjNxj8-5cxqR31o3ivXs58TDT4AGtN8mKWfsYgq6wHlq/exec',token:'fluxo-financeiro-chave-privada
-'};
+const BUILT_IN_CONFIG={url:'https://script.google.com/macros/s/AKfycby4abJ66ZMLNvXGhfCPhJzZZjNxj8-5cxqR31o3ivXs58TDT4AGtN8mKWfsYgq6wHlq/exec',token:''};
 const empty={budget:{salary:0,savingGoal:0,otherIncome:0,cdiRate:14.9},fixed:[],expenses:[],incomes:[],investments:[]};
 let data={...empty,...JSON.parse(localStorage.getItem(KEY)||'{}')}, config={...BUILT_IN_CONFIG,...JSON.parse(localStorage.getItem(CONFIG)||'{}')}, selectedDate=new Date();
 const $=s=>document.querySelector(s), money=v=>(Number(v)||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}), id=()=>crypto.randomUUID();
