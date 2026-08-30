@@ -1,17 +1,16 @@
 # Meu Fluxo
 
-Painel de finanças pessoais responsivo, com funcionamento offline e sincronização opcional pelo Google Planilhas.
+Aplicativo de finanças pessoais para iPhone, feito como PWA e com funcionamento totalmente local.
 
-## Incluído
+## Recursos
 
-- Planejamento com salários, receitas recorrentes e objetivo de reserva;
-- Contas fixas, gastos e entradas extraordinárias por mês;
-- Limite livre para gastar calculado automaticamente;
-- Carteira de investimentos e rendimento mensal estimado a partir do CDI editável;
-- Valores mostrados no padrão brasileiro (R$ 0,00);
-- PWA: pode ser instalado em celulares depois de publicado em HTTPS;
-- Sincronização entre aparelhos usando a sua própria planilha.
+- Entradas e gastos por data, categoria e forma de pagamento;
+- Limite do cartão calculado com renda, despesas fixas e aporte mínimo;
+- Investimentos com saldo inicial, saldo atual, aportes, resgates e rendimento do mês;
+- Navegação mensal, filtros de lançamentos e valores em real brasileiro;
+- Backup e restauração manual em arquivo JSON;
+- Instalação como aplicativo no iPhone, sem Apps Script nem conexão com planilha.
 
 ## Como usar
 
-Para testes locais, abra `index.html`. Para instalar como aplicativo e sincronizar entre dispositivos, publique a pasta em GitHub Pages e siga o [guia do Apps Script](google-apps-script/GUIA-DE-CONEXAO.md).
+Publique esta pasta em um endereço HTTPS e abra no Safari. Use Compartilhar → Adicionar à Tela de Início para instalar. Os dados ficam somente no dispositivo: exporte um backup periodicamente em Ajustes.

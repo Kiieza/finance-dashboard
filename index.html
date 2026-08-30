@@ -13,8 +13,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v2.css">
 </head>
 <body>
+  <div class="app" id="app">
+    <header class="hero" id="hero"></header>
+    <main id="view" class="view"></main>
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <button data-tab="home" class="nav-item active"><span>⌂</span>Início</button>
+      <button data-tab="entries" class="nav-item"><span>≋</span>Lançamentos</button>
+      <button data-tab="investments" class="nav-item"><span>◈</span>Investir</button>
+      <button data-tab="settings" class="nav-item"><span>⚙</span>Ajustes</button>
+    </nav>
+    <button class="fab" id="quickAdd" aria-label="Adicionar lançamento">+</button>
+  </div>
+  <div class="sheet-backdrop" id="backdrop"></div>
+  <section class="sheet" id="sheet" aria-modal="true" role="dialog" aria-labelledby="sheetTitle">
+    <div class="sheet-handle"></div><div class="sheet-head"><h2 id="sheetTitle">Adicionar</h2><button class="icon-close" id="closeSheet" aria-label="Fechar">×</button></div><form id="sheetForm" novalidate></form>
+  </section>
+  <div id="toast" class="toast" role="status"></div>
+  <template>
   <main class="app-shell">
     <header class="topbar">
       <div><p class="eyebrow">VISÃO DO MÊS</p><h1>Meu Fluxo</h1></div>
@@ -49,5 +67,5 @@
   </main>
   <dialog id="entryModal"><form id="entryForm" novalidate><div class="modal-heading"><h2 id="modalTitle">Adicionar</h2><button class="close" type="button" id="closeModal" aria-label="Fechar">×</button></div><div id="modalFields" class="modal-fields"></div><div class="modal-actions"><button class="button secondary" type="button" id="cancelEntry">Cancelar</button><button class="button primary" type="submit">Salvar</button></div></form></dialog>
   <dialog id="settingsModal"><form id="settingsForm"><div class="modal-heading"><h2>Sincronizar dados</h2><button class="close" type="button" id="closeSettings">×</button></div><p class="modal-copy">Cole a URL do aplicativo da web do Google Apps Script e a chave criada na planilha. Assim, seus dados ficam iguais em todos os seus dispositivos.</p><div class="modal-fields"><label>URL do Apps Script<input id="scriptUrl" type="url" placeholder="https://script.google.com/macros/s/.../exec"></label><label>Chave de sincronização<input id="syncToken" type="password" placeholder="Sua chave secreta"></label></div><div class="modal-actions"><button class="button secondary" type="button" id="disconnect">Desconectar</button><button class="button primary" type="submit">Conectar e sincronizar</button></div></form></dialog>
-  <div class="toast" id="toast"></div><script src="app.js"></script>
+  <div class="toast" id="toast"></div></template><script src="app-v2.js"></script>
 </body></html>
